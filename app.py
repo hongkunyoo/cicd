@@ -61,7 +61,8 @@ def predict(num):
     plt.imsave(mem, x)
     mem.seek(0)
 
-    return send_file(mem, mimetype="image/png")
+    #return send_file(mem, mimetype="image/png")
+    return str(np.argmax(y))
 
 
 # 숫자에 대응하는 이미지를 불러옵니다.
