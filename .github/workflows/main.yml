@@ -18,7 +18,7 @@ jobs:
     - name: login
       run: docker login -u $GITHUB_ACTOR -p $PASSWORD
       env:
-      	PASSWORD: ${{ secrets.PASSWORD }}
+        PASSWORD: ${{ secrets.PASSWORD }}
 
     - name: push
       run: docker push $GITHUB_ACTOR/app:$GITHUB_RUN_NUMBER
